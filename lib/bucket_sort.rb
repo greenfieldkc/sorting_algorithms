@@ -3,11 +3,14 @@ require 'benchmark'
 class BucketSortable
   
   def initialize(integer_array)
+    puts "i am inside initialize"
     if ensure_integers?(integer_array)
       @array = integer_array 
     else
       raise ArgumentError, "Input array has negative or non-integer values."
     end
+    @min = nil
+    @max = nil
     get_max_min(@array)
   end
   
@@ -16,8 +19,6 @@ class BucketSortable
   end
   
   def get_max_min(array)
-    @min = nil
-    @max = nil
     array.each do |i|
       @min = array[i] if (@min == nil || array[i] < @min)
       @max = array[i] if (@max == nil || array[i] > @max)
@@ -43,7 +44,7 @@ class BucketSortable
   end
   
 end
-
+=begin
 a = []
 10000.times {a << Random.new.rand(0..200)}
 b = a
@@ -63,3 +64,5 @@ puts "time2 is: #{time2}"
 
 error_array = ["dfsf",0.4, 3, "oops"]
 test_error = BucketSortable.new(error_array)
+
+=end
