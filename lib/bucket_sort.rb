@@ -1,6 +1,6 @@
 require 'benchmark'
 
-class BucketSortable
+class BucketSort
   
   def initialize(integer_array)
     puts "i am inside initialize"
