@@ -1,2 +1,2 @@
-require 'bucket_sort'
 require 'bucket_sortable'
+require 'radix_sortable'

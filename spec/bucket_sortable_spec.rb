@@ -134,8 +134,9 @@ class BucketSortableSpec
       end
       
       it "should iterate through all Hash keys" do
-        pending "some Googling about checking action calls"
+        pending
       end
+      
       describe "@sorted_array" do
         it "should be in sorted order" do
           bucket = BucketSortable.new [1,4,3,2,5,2,6]
